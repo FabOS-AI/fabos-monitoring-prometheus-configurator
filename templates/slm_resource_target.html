@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Add a target</title>
+    </head>
+    <body>
+        <pre>
+            {{ targets }}
+        </pre>
+        <form action="/prometheus/slm-resource-target" method="post">
+            <table>
+                <tr>
+                    <td><label for="slm_id">SLM id</label></td>
+                    <td><input id="slm_id" type="text" name="slm_id"/></td>
+                </tr>
+                <tr>
+                    <td><label for="url">URL</label></td>
+                    <td><input id="url" type="text" name="url"></td>
+                </tr>
+            </table>
+            <input type="submit">
+        </form>
+    </body>
+</html>
