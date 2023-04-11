@@ -58,3 +58,6 @@ def delete_slm_resource_target(slm_id):
     slm_targets = get_slm_targets(exclude=slm_id)
     save_slm_targets(slm_targets)
     return ""
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
