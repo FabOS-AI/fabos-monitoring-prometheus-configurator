@@ -1,0 +1,1 @@
+# fabos-monitoring-prometheus-configurator
