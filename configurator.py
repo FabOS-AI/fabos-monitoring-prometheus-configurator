@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # encoding: utf-8
-import json
+import json, os
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
-TARGETS_FILE_PATH = "targets.json"
+TARGETS_FILE_PATH = "targets/targets.json"
 
 def prometheus_target(slm_id, url):
     return {
@@ -58,6 +58,9 @@ def delete_slm_resource_target(slm_id):
     slm_targets = get_slm_targets(exclude=slm_id)
     save_slm_targets(slm_targets)
     return ""
+
+if not os.path.exists(TARGETS_FILE_PATH):
+    write_targets_file([])
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
