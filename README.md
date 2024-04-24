@@ -1,1 +1,1 @@
-# fabos-monitoring-prometheus-configurator
+The Service Lifecycle Management was transferred to the [Eclipse Service Lifecycle Management](https://projects.eclipse.org/projects/dt.slm) project at the Eclipse Foundation. The functionality of this component has been replaced by using the Consul service discovery to configure the Prometheus targets. Therefore, this repository was not transferred to the Eclipse project and set to archived.
